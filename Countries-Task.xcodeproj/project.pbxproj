@@ -9,23 +9,27 @@
 /* Begin PBXBuildFile section */
 		5A9711612C64293A0020869C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9711602C64293A0020869C /* AppDelegate.swift */; };
 		5A9711632C64293A0020869C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9711622C64293A0020869C /* SceneDelegate.swift */; };
-		5A9711652C64293A0020869C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9711642C64293A0020869C /* ViewController.swift */; };
-		5A9711682C64293A0020869C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 5A9711672C64293A0020869C /* Base */; };
+		5A9711652C64293A0020869C /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9711642C64293A0020869C /* CountriesViewController.swift */; };
 		5A97116B2C64293A0020869C /* Countries_Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A9711692C64293A0020869C /* Countries_Task.xcdatamodeld */; };
 		5A97116D2C64293C0020869C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A97116C2C64293C0020869C /* Assets.xcassets */; };
 		5A9711702C64293C0020869C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 5A97116F2C64293C0020869C /* Base */; };
+		5A9711792C6430B00020869C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9711782C6430B00020869C /* Coordinator.swift */; };
+		5A97117B2C6431390020869C /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A97117A2C6431390020869C /* MainCoordinator.swift */; };
+		5A97117E2C643C7F0020869C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A97117D2C643C7F0020869C /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5A97115D2C64293A0020869C /* Countries-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Countries-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9711602C64293A0020869C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A9711622C64293A0020869C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5A9711642C64293A0020869C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5A9711672C64293A0020869C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5A9711642C64293A0020869C /* CountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
 		5A97116A2C64293A0020869C /* Countries_Task.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Countries_Task.xcdatamodel; sourceTree = "<group>"; };
 		5A97116C2C64293C0020869C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A97116F2C64293C0020869C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A9711712C64293C0020869C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A9711782C6430B00020869C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		5A97117A2C6431390020869C /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		5A97117D2C643C7F0020869C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +62,34 @@
 		5A97115F2C64293A0020869C /* Countries-Task */ = {
 			isa = PBXGroup;
 			children = (
+				5A97117C2C643C530020869C /* Services */,
+				5A9711772C6430290020869C /* Coordinator */,
 				5A9711602C64293A0020869C /* AppDelegate.swift */,
 				5A9711622C64293A0020869C /* SceneDelegate.swift */,
-				5A9711642C64293A0020869C /* ViewController.swift */,
-				5A9711662C64293A0020869C /* Main.storyboard */,
+				5A9711642C64293A0020869C /* CountriesViewController.swift */,
 				5A97116C2C64293C0020869C /* Assets.xcassets */,
 				5A97116E2C64293C0020869C /* LaunchScreen.storyboard */,
 				5A9711712C64293C0020869C /* Info.plist */,
 				5A9711692C64293A0020869C /* Countries_Task.xcdatamodeld */,
 			);
 			path = "Countries-Task";
+			sourceTree = "<group>";
+		};
+		5A9711772C6430290020869C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				5A9711782C6430B00020869C /* Coordinator.swift */,
+				5A97117A2C6431390020869C /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		5A97117C2C643C530020869C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5A97117D2C643C7F0020869C /* NetworkService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +152,6 @@
 			files = (
 				5A97116D2C64293C0020869C /* Assets.xcassets in Resources */,
 				5A9711702C64293C0020869C /* Base in Resources */,
-				5A9711682C64293A0020869C /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,24 +162,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A9711652C64293A0020869C /* ViewController.swift in Sources */,
+				5A9711652C64293A0020869C /* CountriesViewController.swift in Sources */,
+				5A97117B2C6431390020869C /* MainCoordinator.swift in Sources */,
 				5A97116B2C64293A0020869C /* Countries_Task.xcdatamodeld in Sources */,
+				5A9711792C6430B00020869C /* Coordinator.swift in Sources */,
 				5A9711612C64293A0020869C /* AppDelegate.swift in Sources */,
 				5A9711632C64293A0020869C /* SceneDelegate.swift in Sources */,
+				5A97117E2C643C7F0020869C /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5A9711662C64293A0020869C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5A9711672C64293A0020869C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5A97116E2C64293C0020869C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -300,7 +316,6 @@
 				INFOPLIST_FILE = "Countries-Task/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -327,7 +342,6 @@
 				INFOPLIST_FILE = "Countries-Task/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
