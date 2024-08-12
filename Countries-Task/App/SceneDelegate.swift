@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import Swinject
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    static let container = Container()
+    private var mainCoordinator: Coordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -18,11 +20,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        
-        if let window {
-            let mainCoordinator = MainCoordinator(window: window)
-            mainCoordinator.start()
+        if let window  {
+            
+            SceneDelegate.container.removeAll()
+            SceneDelegate.container.registerDependencies()
+            
+            mainCoordinator = MainCoordinator(window: window)
+            mainCoordinator?.start()
         }
+        
 
         
     }

@@ -17,7 +17,9 @@ final class MainCoordinator: Coordinator {
     }
     
     func start() {
-        let counriesViewController = CountriesViewController()
+         let viewModel = SceneDelegate.container.resolve(CountriesViewModel.self)!
+        
+        let counriesViewController = CountriesViewController(viewModel: viewModel)
         navigationController.pushViewController(counriesViewController, animated: false)
         
         window.rootViewController = navigationController
